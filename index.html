@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NickMaster - স্টাইলিশ নাম জেনারেটর</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>NickMaster Loading...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-fire"></i>
+                <span>Nick<span class="highlight">Master</span></span>
+            </div>
+            <nav class="nav">
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#generator" class="active">Generator</a></li>
+                    <li><a href="#symbols">Symbols</a></li>
+                    <li><a href="#fonts">Fonts</a></li>
+                    <li><a href="#favorites">Favorites</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>🎮 স্টাইলিশ নাম তৈরি করুন</h1>
+            <p>গেমিং, সোশ্যাল মিডিয়া এবং আরও অনেক কিছুর জন্য অসাধারণ নাম!</p>
+        </div>
+    </section>
+
+    <!-- Main Generator Section -->
+    <section id="generator" class="generator-section">
+        <div class="container">
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="nameInput" placeholder="আপনার নাম লিখুন..." maxlength="20">
+                    <button id="generateBtn" class="btn-generate">
+                        <i class="fas fa-magic"></i> Generate
+                    </button>
+                </div>
+                <button id="randomBtn" class="btn-random">
+                    <i class="fas fa-random"></i> Random Name
+                </button>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">
+                    <i class="fas fa-globe"></i> All
+                </button>
+                <button class="tab-btn" data-category="gaming">
+                    <i class="fas fa-gamepad"></i> Gaming
+                </button>
+                <button class="tab-btn" data-category="stylish">
+                    <i class="fas fa-star"></i> Stylish
+                </button>
+                <button class="tab-btn" data-category="cool">
+                    <i class="fas fa-snowflake"></i> Cool
+                </button>
+                <button class="tab-btn" data-category="cute">
+                    <i class="fas fa-heart"></i> Cute
+                </button>
+                <button class="tab-btn" data-category="scary">
+                    <i class="fas fa-skull"></i> Scary
+                </button>
+            </div>
+
+            <!-- Generated Names Grid -->
+            <div class="names-grid" id="namesGrid">
+                <!-- Names will be generated here -->
+            </div>
+
+            <!-- Load More Button -->
+            <button id="loadMoreBtn" class="btn-load-more" style="display: none;">
+                <i class="fas fa-plus"></i> Load More Styles
+            </button>
+        </div>
+    </section>
+
+    <!-- Symbols Section -->
+    <section id="symbols" class="symbols-section">
+        <div class="container">
+            <h2><i class="fas fa-icons"></i> Symbols & Decorations</h2>
+            
+            <!-- Symbol Categories -->
+            <div class="symbol-categories">
+                <button class="symbol-tab active" data-symbol="popular">🔥 Popular</button>
+                <button class="symbol-tab" data-symbol="stars">⭐ Stars</button>
+                <button class="symbol-tab" data-symbol="hearts">❤️ Hearts</button>
+                <button class="symbol-tab" data-symbol="arrows">➤ Arrows</button>
+                <button class="symbol-tab" data-symbol="brackets">『』Brackets</button>
+                <button class="symbol-tab" data-symbol="gaming">🎮 Gaming</button>
+                <button class="symbol-tab" data-symbol="animals">🐾 Animals</button>
+                <button class="symbol-tab" data-symbol="nature">🌸 Nature</button>
+            </div>
+
+            <!-- Symbols Grid -->
+            <div class="symbols-grid" id="symbolsGrid">
+                <!-- Symbols will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Fancy Fonts Section -->
+    <section id="fonts" class="fonts-section">
+        <div class="container">
+            <h2><i class="fas fa-font"></i> Fancy Fonts Preview</h2>
+            <div class="font-input-area">
+                <input type="text" id="fontPreviewInput" placeholder="Type to preview fonts...">
+            </div>
+            <div class="fonts-grid" id="fontsGrid">
+                <!-- Font previews will be shown here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Favorites Section -->
+    <section id="favorites" class="favorites-section">
+        <div class="container">
+            <h2><i class="fas fa-heart"></i> Your Favorites</h2>
+            <div class="favorites-grid" id="favoritesGrid">
+                <p class="empty-favorites">No favorites yet! Click ❤️ on any name to save.</p>
+            </div>
+            <button id="clearFavorites" class="btn-clear" style="display: none;">
+                <i class="fas fa-trash"></i> Clear All
+            </button>
+        </div>
+    </section>
+
+    <!-- Quick Tools -->
+    <div class="quick-tools">
+        <button class="tool-btn" id="textCaseBtn" title="Change Case">
+            <i class="fas fa-text-height"></i>
+        </button>
+        <button class="tool-btn" id="reverseBtn" title="Reverse Text">
+            <i class="fas fa-exchange-alt"></i>
+        </button>
+        <button class="tool-btn" id="scrollTopBtn" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Copied!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-fire"></i> NickMaster
+                </div>
+                <p>Create awesome stylish names for gaming & social media!</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NickMaster. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
