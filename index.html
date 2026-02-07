@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Stylish Name Generator for Gaming & Social Media">
+    <title>NickMaster - Stylish Name Generator</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-box">
+            <div class="spinner"></div>
+            <p>NickMaster</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">🎮 Nick<span>Master</span></a>
+            <nav id="nav">
+                <a href="#gen" class="nav-link active">Generator</a>
+                <a href="#sym" class="nav-link">Symbols</a>
+                <a href="#fnt" class="nav-link">Fonts</a>
+                <a href="#fav" class="nav-link">Favorites</a>
+            </nav>
+            <div class="header-btns">
+                <button id="themeBtn" class="icon-btn"><i class="fas fa-moon"></i></button>
+                <button id="menuBtn" class="icon-btn d-md-none"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div id="mobileNav" class="mobile-nav">
+        <a href="#gen">🎯 Generator</a>
+        <a href="#sym">⭐ Symbols</a>
+        <a href="#fnt">🔤 Fonts</a>
+        <a href="#fav">❤️ Favorites</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="badge">🔥 #1 Name Generator</span>
+            <h1>Create <span class="glow">Stylish Names</span><br>for Gaming & Social</h1>
+            <p class="hero-sub">70+ Fonts • 5000+ Symbols • Unlimited Styles • 100% Free</p>
+            <div class="stats">
+                <div><strong>70+</strong><span>Fonts</span></div>
+                <div><strong>5000+</strong><span>Symbols</span></div>
+                <div><strong>∞</strong><span>Styles</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generator -->
+    <section class="section" id="gen">
+        <div class="container">
+            <div class="gen-card">
+                <div class="input-row">
+                    <div class="input-wrap">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="input" placeholder="Enter your name..." maxlength="15" autocomplete="off">
+                        <button id="clearBtn" class="clear-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                    <button id="genBtn" class="btn btn-main"><i class="fas fa-magic"></i> Generate</button>
+                </div>
+                <div class="quick-btns">
+                    <button id="randBtn" class="btn btn-out"><i class="fas fa-random"></i> Random</button>
+                    <button id="upBtn" class="btn btn-out"><i class="fas fa-arrow-up"></i> UPPER</button>
+                    <button id="lowBtn" class="btn btn-out"><i class="fas fa-arrow-down"></i> lower</button>
+                    <button id="revBtn" class="btn btn-out"><i class="fas fa-exchange-alt"></i> Reverse</button>
+                </div>
+            </div>
+
+            <div class="cat-tabs" id="catTabs">
+                <button class="cat active" data-c="all">All</button>
+                <button class="cat" data-c="gaming">🎮 Gaming</button>
+                <button class="cat" data-c="stylish">✨ Stylish</button>
+                <button class="cat" data-c="cool">❄️ Cool</button>
+                <button class="cat" data-c="cute">💕 Cute</button>
+                <button class="cat" data-c="scary">💀 Scary</button>
+                <button class="cat" data-c="royal">👑 Royal</button>
+                <button class="cat" data-c="fire">🔥 Fire</button>
+            </div>
+
+            <div class="res-head">
+                <h2><i class="fas fa-wand-magic-sparkles"></i> Generated Names</h2>
+                <span id="count" class="count-badge">0 styles</span>
+            </div>
+
+            <div id="grid" class="grid">
+                <div class="empty">
+                    <div class="empty-ico">✨</div>
+                    <h3>Type a name and click Generate</h3>
+                </div>
+            </div>
+
+            <button id="moreBtn" class="btn btn-sec btn-center" style="display:none">
+                <i class="fas fa-plus"></i> Load More Styles
+            </button>
+        </div>
+    </section>
+
+    <!-- Symbols -->
+    <section class="section section-alt" id="sym">
+        <div class="container">
+            <div class="sec-head">
+                <h2><i class="fas fa-icons"></i> Symbols Collection</h2>
+                <p>5000+ symbols • Click to copy</p>
+            </div>
+            <div class="sym-tabs" id="symTabs">
+                <button class="stab active" data-s="popular">🔥 Popular</button>
+                <button class="stab" data-s="stars">⭐ Stars</button>
+                <button class="stab" data-s="hearts">❤️ Hearts</button>
+                <button class="stab" data-s="arrows">➤ Arrows</button>
+                <button class="stab" data-s="brackets">『』Brackets</button>
+                <button class="stab" data-s="gaming">🎮 Gaming</button>
+                <button class="stab" data-s="crowns">👑 Crowns</button>
+                <button class="stab" data-s="scary">☠️ Scary</button>
+                <button class="stab" data-s="nature">🌸 Nature</button>
+                <button class="stab" data-s="animals">🐾 Animals</button>
+                <button class="stab" data-s="music">🎵 Music</button>
+                <button class="stab" data-s="shapes">🔷 Shapes</button>
+                <button class="stab" data-s="zodiac">♈ Zodiac</button>
+                <button class="stab" data-s="numbers">🔢 Numbers</button>
+                <button class="stab" data-s="faces">😀 Faces</button>
+                <button class="stab" data-s="hands">✋ Hands</button>
+                <button class="stab" data-s="food">🍕 Food</button>
+                <button class="stab" data-s="sports">⚽ Sports</button>
+                <button class="stab" data-s="travel">✈️ Travel</button>
+                <button class="stab" data-s="objects">🔑 Objects</button>
+                <button class="stab" data-s="weather">🌤️ Weather</button>
+                <button class="stab" data-s="flags">🏁 Flags</button>
+            </div>
+            <div id="symGrid" class="sym-grid"></div>
+        </div>
+    </section>
+
+    <!-- Fonts -->
+    <section class="section" id="fnt">
+        <div class="container">
+            <div class="sec-head">
+                <h2><i class="fas fa-font"></i> Fancy Fonts</h2>
+                <p>70+ unique font styles • Click to copy</p>
+            </div>
+            <div class="fnt-input">
+                <input type="text" id="fntInput" placeholder="Type to preview..." value="NickMaster">
+            </div>
+            <div id="fntGrid" class="fnt-grid"></div>
+        </div>
+    </section>
+
+    <!-- Favorites -->
+    <section class="section section-alt" id="fav">
+        <div class="container">
+            <div class="sec-head">
+                <h2><i class="fas fa-heart"></i> Your Favorites</h2>
+                <p>Saved names for quick access</p>
+            </div>
+            <div id="favGrid" class="grid">
+                <div class="empty"><div class="empty-ico">💝</div><h3>No favorites yet</h3></div>
+            </div>
+            <button id="clearFav" class="btn btn-danger btn-center" style="display:none">
+                <i class="fas fa-trash"></i> Clear All
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo">🎮 NickMaster</div>
+                    <p>Create awesome stylish names for gaming & social media. Free forever!</p>
+                </div>
+                <div>
+                    <h4>Features</h4>
+                    <a href="#gen">Name Generator</a>
+                    <a href="#sym">Symbols</a>
+                    <a href="#fnt">Fonts</a>
+                    <a href="#fav">Favorites</a>
+                </div>
+                <div>
+                    <h4>For Games</h4>
+                    <a href="#">Free Fire Names</a>
+                    <a href="#">PUBG Names</a>
+                    <a href="#">BGMI Names</a>
+                    <a href="#">COD Names</a>
+                </div>
+            </div>
+            <div class="footer-bot">
+                <p>© 2024 NickMaster</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"><i class="fas fa-check-circle"></i><span id="toastMsg">Copied!</span></div>
+
+    <!-- Scroll Top -->
+    <button id="topBtn" class="top-btn"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
